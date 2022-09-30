@@ -47,6 +47,7 @@
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     
     NSLog(@"size width: %f, height: %f", size.width, size.height);
+    // 注释这段代码感受BUG😄
     _changeOrientations.selected = size.width > size.height;
     if (size.width > size.height) {
         _top.constant = 0;
