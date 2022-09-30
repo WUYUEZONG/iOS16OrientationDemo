@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSm-Aj-I23">
+                                <rect key="frame" x="0.0" y="67.000000000000014" width="390" height="219.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mp7-Pi-Hge">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="219.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Mp7-Pi-Hge" secondAttribute="height" multiplier="16:9" priority="800" id="dxw-9r-dRe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="leading" secondItem="IJy-k2-f4T" secondAttribute="leading" id="0AO-Ea-qdg"/>
+                                    <constraint firstItem="7vy-Jy-Sq6" firstAttribute="bottom" secondItem="Mp7-Pi-Hge" secondAttribute="bottom" id="0WE-1c-gwc"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="centerX" secondItem="7vy-Jy-Sq6" secondAttribute="centerX" id="33b-LX-D8W"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="leading" secondItem="7vy-Jy-Sq6" secondAttribute="leading" id="FVO-vA-Luk"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="top" secondItem="IJy-k2-f4T" secondAttribute="top" id="VxQ-Qa-zfu"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="trailing" secondItem="IJy-k2-f4T" secondAttribute="trailing" id="b19-ZY-vDp"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="centerY" secondItem="7vy-Jy-Sq6" secondAttribute="centerY" id="h81-dJ-6Qc"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="top" secondItem="7vy-Jy-Sq6" secondAttribute="top" id="lVk-Fp-ze3"/>
+                                    <constraint firstItem="7vy-Jy-Sq6" firstAttribute="trailing" secondItem="Mp7-Pi-Hge" secondAttribute="trailing" id="pom-xG-hg1"/>
+                                    <constraint firstItem="Mp7-Pi-Hge" firstAttribute="bottom" secondItem="IJy-k2-f4T" secondAttribute="bottom" id="uoa-ld-9kO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IJy-k2-f4T"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7vy-Jy-Sq6"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zFd-j3-gM7"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-dL-6LJ">
+                                <rect key="frame" x="57" y="411" width="276.33333333333331" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Go to change screen orientations"/>
+                                <connections>
+                                    <action selector="gotoChangeScreenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Y5-QX-Dzs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aSm-Aj-I23" secondAttribute="bottom" id="1K1-IW-iKq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSm-Aj-I23" secondAttribute="trailing" id="71i-yy-qXa"/>
+                            <constraint firstItem="aSm-Aj-I23" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Dq0-rj-9AK"/>
+                            <constraint firstItem="vQx-dL-6LJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EjY-m6-RR3"/>
+                            <constraint firstItem="aSm-Aj-I23" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TkM-hz-Ild"/>
+                            <constraint firstItem="vQx-dL-6LJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Z3T-OQ-YVX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1K1-IW-iKq"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottom" destination="1K1-IW-iKq" id="N4C-jh-HI0"/>
+                        <outlet property="changeOrientations" destination="vQx-dL-6LJ" id="R22-13-oiM"/>
+                        <outlet property="scroller" destination="aSm-Aj-I23" id="dBZ-75-J6T"/>
+                        <outlet property="top" destination="Dq0-rj-9AK" id="dcx-4h-rjJ"/>
+                        <outlet property="videoView" destination="Mp7-Pi-Hge" id="HgI-g2-FfZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-128" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
